@@ -4,7 +4,7 @@
 
 A YQL wrapper used to generate a proxy URL to a given resource.
 
-Current version: **1.0.4**
+Current version: **1.0.0**
 
 Lead Maintainer: [Halim Qarroum](mailto:hqarroum@awox.com)
 
