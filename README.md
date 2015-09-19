@@ -35,7 +35,7 @@ The library will generate an URL pointing to the initial resource, but instead o
 Simply require the `proxify-url` according to the environment you are in (Node.js, AMD and the browser are supported), and call the returned function with the given URL. An example in the browser would be as follow :
 
 ```javascript
-var url = proxify('http://foo.bar/');
+var url = proxify('https://api.github.com/users/octocat');
 ```
 
 > Note that the proxy URL will be secured and that by default the output will be a JSON document.
@@ -44,4 +44,13 @@ var url = proxify('http://foo.bar/');
 
 To customize the proxy URL parameters and how the document is returned by the YQL API, you can pass the following options to the `proxify` function :
 
+Option key    | Description
+------------- | -------------
+`format`      | The format of the returned document, can be `json` or `xml`. The default value is `json`.
+`jsonCompat`  | YQL transforms all JSON data sources into XML before returning results. During the tranformation from XML to JSON, the original JSON may be altered or become "lossy". In other words, the original JSON may not be the same as the returned JSON. By default, this library disables lossy JSON, but you can pass the boolean `false` to get a lossy JSON.
 
+#### Examples
+
+```javascript
+var url = proxify('https://api.github.com/users/octocat', { format: 'xml', jsonCompat: false });
+```
