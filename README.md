@@ -37,3 +37,11 @@ Simply require the `proxify-url` according to the environment you are in (Node.j
 ```javascript
 var url = proxify('http://foo.bar/');
 ```
+
+> Note that the proxy URL will be secured and that by default the output will be a JSON document.
+
+### Options
+
+To customize the proxy URL parameters and how the document is returned by the YQL API, you can pass the following options to the `proxify` function :
+
+
