@@ -59,7 +59,6 @@ The below example will ask the YQL API to parse the document as JSON and to outp
 var url = proxify('http://jsonplaceholder.typicode.com/posts', {
   outputformat: 'xml',
   inputFormat: 'json'
-  callback: `foo`,
-  jsonCompat: false
+  callback: `foo`
 });
 ```
