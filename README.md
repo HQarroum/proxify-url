@@ -49,15 +49,17 @@ Option key    | Description
 `outputformat`| The format in which the document must be returned. The default value is `json`.
 `inputFormat` | Indicates in what format the YQL API should be parsing the document. The default value is `json`.
 `jsonCompat`  | YQL transforms all JSON data sources into XML before returning results. During the tranformation from XML to JSON, the original JSON may be altered or become "lossy". In other words, the original JSON may not be the same as the returned JSON. By default, this library disables lossy JSON, but you can pass the boolean `false` to get a lossy JSON.
+`callback`    | Indicates to the YQL API that it should return the result of the query as a parameter of a function, in a JSONP manner. The value of the `callback` parameter specifies the name of the function.
 
 #### Examples
 
-The below example will ask the YQL API to parse the document as JSON and to output it as an XML document.
+The below example will ask the YQL API to parse the document as JSON and to output it as an XML document, and to pass it to a function called `foo`.
 
 ```javascript
 var url = proxify('http://jsonplaceholder.typicode.com/posts', {
   outputformat: 'xml',
   inputFormat: 'json'
+  callback: `foo`,
   jsonCompat: false
 });
 ```
