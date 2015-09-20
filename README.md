@@ -52,9 +52,9 @@ Option key    | Description
 
 #### Examples
 
+The below example will ask the YQL API to parse the document as JSON and to output it as an XML document.
+
 ```javascript
-// Asks the YQL API to parse the document as JSON
-// and to output it as XML.
 var url = proxify('http://jsonplaceholder.typicode.com/posts', {
   outputformat: 'xml',
   inputFormat: 'json'
