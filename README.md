@@ -46,7 +46,7 @@ To customize the proxy URL parameters and how the document is returned by the YQ
 
 Option key    | Description
 ------------- | -------------
-`format`      | The format of the returned document, can be `json` or `xml`. The default value is `json`.
+`format`      | The format of the returned document. The default value is `json`.
 `jsonCompat`  | YQL transforms all JSON data sources into XML before returning results. During the tranformation from XML to JSON, the original JSON may be altered or become "lossy". In other words, the original JSON may not be the same as the returned JSON. By default, this library disables lossy JSON, but you can pass the boolean `false` to get a lossy JSON.
 
 #### Examples
