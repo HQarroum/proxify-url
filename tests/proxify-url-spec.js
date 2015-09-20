@@ -15,9 +15,14 @@ describe('The proxify function', function () {
         proxify('https://api.github.com/users/octocat').should.be.eql(result);
     });
 
-    it('should be able to proxify an URL using user options', function () {
+    it('should be able to proxify an URL using a custom output format options', function () {
         var result = 'https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20json%20WHERE%20url%3D%22https%3A%2F%2Fapi.github.com%2Fusers%2Foctocat%22&format=xml';
         proxify('https://api.github.com/users/octocat', { outputFormat: 'xml', jsonCompat: false }).should.be.eql(result);
+    });
+
+    it('should be able to proxify an URL using a custom input format options', function () {
+        var result = 'https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20xml%20WHERE%20url%3D%22https%3A%2F%2Fapi.github.com%2Fusers%2Foctocat%22&format=json&jsonCompat=new';
+        proxify('https://api.github.com/users/octocat', { inputFormat: 'xml' }).should.be.eql(result);
     });
 
     it('should always be able to return a secured proxy URL', function () {
