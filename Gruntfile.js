@@ -13,6 +13,9 @@ module.exports = function (grunt) {
         jshint: {
             dist: {
                 src: ['Gruntfile.js', 'lib/*.js']
+            },
+            test: {
+                src: ['tests/*.js']
             }
         },
         uglify: {
@@ -20,9 +23,15 @@ module.exports = function (grunt) {
                 src: 'lib/index.js',
                 dest: 'dist/proxify-url.min.js'
             }
+        },
+        mochaTest: {
+            test: {
+                src: ['tests/**/*.js']
+            }
         }
     });
 
     // Registering the tasks.
-    grunt.registerTask('default', ['clean', 'jshint', 'uglify']);
+    grunt.registerTask('test', ['mochaTest']);
+    grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'test']);
 };
