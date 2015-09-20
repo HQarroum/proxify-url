@@ -24,7 +24,7 @@ bower install --save proxify-url
 
 ## Description
 
-This small component aims to make it possible to issue AJAX requests to third-party resources when it is not possible in normal cases, because of [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) or because the remote service does not support [JSONP](https://en.wikipedia.org/wiki/JSONP) for instance.
+This small component aims to make it possible to issue AJAX requests to third-party resources when it is not possible in normal cases, typically because of [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) or because the remote service does not support [JSONP](https://en.wikipedia.org/wiki/JSONP) for instance.
 
 The library will generate an URL pointing to the initial resource, but instead of having the browser directly request the remote server for the resource, it will request the Yahoo Query Language API to act as a middle man since it supports `CORS` and `JSONP`.
 
@@ -32,13 +32,13 @@ The library will generate an URL pointing to the initial resource, but instead o
 
 ### Proxify an url
 
-Simply require the `proxify-url` according to the environment you are in (Node.js, AMD and the browser are supported), and call the returned function with the given URL. An example in the browser would be as follow :
+Simply require the `proxify-url` module according to the environment you are in (Node.js, AMD and the browser are supported), and call the returned function with the given URL. An example in the browser would be as follow :
 
 ```javascript
 var url = proxify('https://api.github.com/users/octocat');
 ```
 
-> Note that the proxy URL will be secured and that by default the output will be a JSON document.
+> Note that the returned proxy URL will be secured and that by default the output will be a JSON document.
 
 ### Options
 
