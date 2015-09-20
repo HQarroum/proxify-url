@@ -1,6 +1,7 @@
 ![Logo](https://s.yimg.com/lq/i/us/pps/yql128.gif)
 
 # proxify-url
+[![Build Status](https://travis-ci.org/HQarroum/proxify-url.svg?branch=master)](https://travis-ci.org/HQarroum/Fsm)
 
 A YQL wrapper used to generate a proxy URL to a given resource.
 
