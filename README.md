@@ -46,11 +46,18 @@ To customize the proxy URL parameters and how the document is returned by the YQ
 
 Option key    | Description
 ------------- | -------------
-`format`      | The format of the returned document. The default value is `json`.
+`outputformat`| The format in which the document must be returned. The default value is `json`.
+`inputFormat` | Indicates in what format the YQL API should be parsing the document. The default value is `json`.
 `jsonCompat`  | YQL transforms all JSON data sources into XML before returning results. During the tranformation from XML to JSON, the original JSON may be altered or become "lossy". In other words, the original JSON may not be the same as the returned JSON. By default, this library disables lossy JSON, but you can pass the boolean `false` to get a lossy JSON.
 
 #### Examples
 
 ```javascript
-var url = proxify('https://api.github.com/users/octocat', { format: 'xml', jsonCompat: false });
+// Asks the YQL API to parse the document as JSON
+// and to output it as XML.
+var url = proxify('http://jsonplaceholder.typicode.com/posts', {
+  outputformat: 'xml',
+  inputFormat: 'json'
+  jsonCompat: false
+});
 ```
