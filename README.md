@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/HQarroum/proxify-url.svg?branch=master)](https://travis-ci.org/HQarroum/Fsm)
 [![Code Climate](https://codeclimate.com/github/HQarroum/proxify-url/badges/gpa.svg)](https://codeclimate.com/github/HQarroum/proxify-url)
 
-A YQL wrapper used to generate a proxy URL to a given resource.
+An YQL wrapper used to generate a proxy URL to a given resource.
 
 Current version: **1.0.0**
 
