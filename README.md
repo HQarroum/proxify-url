@@ -64,3 +64,13 @@ var url = proxify('http://jsonplaceholder.typicode.com/posts', {
   callback: 'foo'
 });
 ```
+
+### No conflict
+
+Since this module is distributed in the form of an UMD (Univeral Module Definition), it might be easy to use it using module loaders such as `RequireJS` or `require` in Node while still keeping the module completely encapsulated.
+
+However, in the context of a browser, the `proxify` object name is exported in the global namespace. To prevent it from conflicting with another component exporting an object with the same name, you can use the `.noConflict` function as follow.
+
+```javascript
+var proxy = proxify.noConflict();
+```
