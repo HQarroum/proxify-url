@@ -3,9 +3,9 @@ var proxify = require('../lib');
 var url     = require('url');
 
 describe('The proxify function', function () {
-    
+
     var baseUrl = 'https://query.yahooapis.com/v1/public/yql?';
-    
+
     /**
      * Invalid input test.
      */
@@ -38,12 +38,12 @@ describe('The proxify function', function () {
         var result = baseUrl + 'q=SELECT%20*%20FROM%20xml%20WHERE%20url%3D%22https%3A%2F%2Fapi.github.com%2Fusers%2Foctocat%22&format=json&jsonCompat=new';
         proxify('https://api.github.com/users/octocat', { inputFormat: 'xml' }).should.be.eql(result);
     });
-    
+
     it('should be able to proxify an URL with query parameters', function () {
-	var result = baseUrl + 'q=SELECT%20*%20FROM%20json%20WHERE%20url%3D%22https%3A%2F%2Fapi.github.com%2Fsearch%2Frepositories%3Fq%3Dproxify-url%26order%3Dasc%22&format=json&jsonCompat=new';
-	proxify('https://api.github.com/search/repositories?q=proxify-url&order=asc').should.be.eql(result);
+        var result = baseUrl + 'q=SELECT%20*%20FROM%20json%20WHERE%20url%3D%22https%3A%2F%2Fapi.github.com%2Fsearch%2Frepositories%3Fq%3Dproxify-url%26order%3Dasc%22&format=json&jsonCompat=new';
+        proxify('https://api.github.com/search/repositories?q=proxify-url&order=asc').should.be.eql(result);
     });
-    
+
     /**
      * JSONP callback test.
      */
