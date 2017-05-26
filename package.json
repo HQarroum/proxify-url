@@ -4,7 +4,9 @@
   "description": "An YQL wrapper used to generate a proxy URL to a given resource.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "build": "grunt",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
