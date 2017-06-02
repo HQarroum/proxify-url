@@ -2,7 +2,6 @@
 
 # proxify-url
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/HQarroum/proxify-url.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/HQarroum/proxify-url.svg?branch=master)](https://travis-ci.org/HQarroum/proxify-url)
 [![Code Climate](https://codeclimate.com/github/HQarroum/proxify-url/badges/gpa.svg)](https://codeclimate.com/github/HQarroum/proxify-url)
 
