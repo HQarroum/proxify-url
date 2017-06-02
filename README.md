@@ -1,7 +1,6 @@
 ![Logo](https://s.yimg.com/lq/i/us/pps/yql128.gif)
 
 # proxify-url
-
 [![Build Status](https://travis-ci.org/HQarroum/proxify-url.svg?branch=master)](https://travis-ci.org/HQarroum/proxify-url)
 [![Code Climate](https://codeclimate.com/github/HQarroum/proxify-url/badges/gpa.svg)](https://codeclimate.com/github/HQarroum/proxify-url)
 
